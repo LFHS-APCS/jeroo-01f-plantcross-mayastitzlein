@@ -5,11 +5,73 @@
 public class Jeroo extends JerooBase {
 
     
-    public void plantCross() {
-        
-    }
     // Put any helpermethods here
-    
+    public void hoptoStart () {
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.turn(RIGHT);
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.hop();
+      this.turn(RIGHT);
+    }
+
+    public void plantHop () {
+      this.plant();
+      this.hop();
+    }
+
+    public void plantturnLefthop () {
+      this.plant();
+      this.turn(LEFT);
+      this.hop();
+    }
+
+    public void straightarmFirstside () {
+      this.plantHop();
+      this.plantHop();
+      this.plantHop();
+    }
+
+    public void aroundArm () {
+      this.plantturnLefthop();
+      this.plantHop();
+      this.plantturnLefthop();
+    }
+
+    public void straightarmSecondside () {
+      this.plantHop();
+      this.plantHop();
+      this.turn(RIGHT);
+    }
+
+    public void crossArm () {
+      this.straightarmFirstside();
+      this.aroundArm();
+      this.straightarmSecondside();
+    }
+
+    public void hopAway () {
+      this.hop();
+      this.turn(RIGHT);
+      this.hop();
+    }
+
+    public void plantCross () {
+      this.hoptoStart();
+      this.crossArm();
+      this.crossArm();
+      this.crossArm();
+      this.crossArm();
+      this.hopAway();
+    }
     
     
     
